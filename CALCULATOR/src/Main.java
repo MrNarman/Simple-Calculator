@@ -15,7 +15,8 @@ public class Main {
 
         double result;
 
-        switch(operator) {
+        try{
+            switch(operator) {
             case '+':
                 result = num1 + num2;
                 break;
@@ -31,11 +32,12 @@ public class Main {
             default:
                 System.out.println("Invalid operator");
                 return;
-        }
-
-        System.out.println(num1 + " " + operator + " " + num2 + " = " + result);
+         System.out.println(num1 + " " + operator + " " + num2 + " = " + result);
 
         scanner.close();
-
+        
+        } catch (ArithmeticException e){
+            System.out.print("Cannot divide by Zero")
+        }     
     }
 }
